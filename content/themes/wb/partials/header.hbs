@@ -1,0 +1,18 @@
+{{! The big featured header }}
+<header id="header">
+    <nav class="header-nav" {{#if @blog.cover}}style="background-image:url({{@blog.cover}}){{/if}}">
+
+      <div class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></div>
+
+      <!--Change this to customize the navigation-->
+      <div class="taglist-wrapper clearfix">
+        <ul id="taglist" class="taglist">
+            <li><a href="{{@blog.url}}">首页</a></li>
+            <li><a href="/tag/frontend">前端</a></li>
+            <li><a href="#">后端</a></li>
+            <li><a href="#">作品展</a></li>
+        </ul>
+      </div>
+    </nav>
+
+</header>

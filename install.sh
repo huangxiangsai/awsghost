@@ -5,8 +5,24 @@ sudo apt-get update
 sudo apt-get install -y python-software-properties python g++ make  
 sudo add-apt-repository ppa:chris-lea/node.js  
 sudo apt-get update  
-sudo apt-get install nodejs 
 sudo apt-get git-core
+
+
+cd /usr/local/src/
+pwd
+#  NODE download address  https://nodejs.org/download/release/
+
+# if not g++ , have to command   sudo apt-get install g++
+sudo wget https://nodejs.org/download/release/v0.12.6/node-v0.12.6.tar.gz
+sudo tar -zxvf node-v0.12.6.tar.gz
+cd /usr/local/src/node-v0.12.6/
+
+sudo ./configure
+sudo make
+sudo make install
+
+sudo cp /usr/local/bin/node /usr/sbin/
+
 
 # nginx 安装
 sudo apt-get install nginx

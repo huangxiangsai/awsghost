@@ -10,8 +10,8 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://www.devsai.com',
-	urlSSL : 'http://www.devsai.com',
+        url: 'http://blog.devsai.com',
+	urlSSL : 'http://blog.devsai.com',
         mail: {
 		transprot : 'SMTP',
 		options : {
@@ -42,7 +42,7 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blogs published URL.
-        url: 'http://www.devsai.com',
+        url: 'http://blog.devsai.com',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
