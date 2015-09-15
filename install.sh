@@ -44,16 +44,6 @@ location / {
     }
 }
 
-# 处理特定路径
-location /content/images {  
-  alias /srv/ghost/content/images;
-  expires max;
-}
-
-location /assets {  
-  alias /srv/ghost/content/themes/ghost-wbkd/assets;
-  expires max;
-}
 EOF
 
 
@@ -66,24 +56,26 @@ sudo service nginx restart
 sudo npm install forever -g
 
 #安装 sqlite3
-npm install -g sqlite3 
+sudo npm install -g sqlite3 
 
-mkdir -p /var/www/blog
+sudo mkdir -p /var/www/blog
 
 cd /var/www/blog
 
-git clone https://github.com/huangxiangsai/awsghost.git ghost
+sudo git clone https://github.com/huangxiangsai/awsghost.git ./ 
 
-cd ghost/content
+sudo git config user.name 'xiangsai.huang'
 
-git clone https://github.com/huangxiangsai/myblog_sqlites_data.git data
+sudo git config user.email '469181336@qq.com'
 
-cd data 
+#git clone https://github.com/huangxiangsai/myblog_sqlites_data.git data
 
-dd if=myblog.des3 |openssl des3 -d -k hxs123456 | tar zxf - 
+#cd data 
+
+#dd if=myblog.des3 |openssl des3 -d -k hxs123456 | tar zxf - 
 
 
-cd /var/www/blog/ghost/
+cd /var/www/blog
 
 NODE_ENV=production forever start index.js
 
