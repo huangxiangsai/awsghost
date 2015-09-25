@@ -173,8 +173,11 @@ h6 {
 }
 
 a {
-    color: #4A4A4A;
+    color: #3A4A4A;
     transition: color ease 0.3s;
+}
+em a {
+    color : #AA4A4f;
 }
 
 a:hover {

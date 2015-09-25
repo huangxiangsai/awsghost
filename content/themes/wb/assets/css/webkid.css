@@ -270,6 +270,10 @@ body * {
   background: #55acee;
 }
 
+.social-item.weibo {
+  background : #FF9933;
+}
+
 .social-item.home {
   background: #ffd00e;
 }
